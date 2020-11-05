@@ -1,0 +1,210 @@
+/*html
+body {
+  width:100%;
+}
+
+.container {
+  width:2000px;
+  height:auto;
+  position:relative;
+  z-index:-1;
+  padding:0;
+  margin:0;
+}
+.baner-img {
+  overflow: hidden;
+  background-size: contain;
+  background-position: center;
+}
+
+.greetings p.border-line {margin-top:1em;}
+*/
+/*bootstrap*/
+body {
+  max-width:2000px;
+  margin:auto;
+}
+.container-fluid{
+  height:auto;
+  position:relative;
+  z-index:-1;
+}
+
+.baner-img {
+  overflow: hidden;
+  background-size: contain;
+  background-position: center;
+
+}
+
+.snowflakes {
+  width:100%;
+  height:calc(100% + 280px);
+  overflow:hidden;
+  position:absolute;
+  top:-280px;
+  left: 0;
+  right:0;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Arvo:700);
+@import url(https://fonts.googleapis.com/css?family=Seaweed+Script);
+
+.greetings {
+  height:100%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index:2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.drop-shadow {
+  color: #fff;
+  font-family: Arvo;
+  font-weight: bold;
+  text-shadow:
+    -3px -3px 0 #222,
+    3px -3px 0 #222,
+    -3px 3px 0 #222,
+    3px 3px 0 #222,
+    4px 4px 0 #fff,
+    5px 5px 0 #fff,
+    6px 6px 0 #fff,
+    7px 7px 0 #fff;
+  line-height: 0.8em;
+  letter-spacing: 0.1em;
+  transform: scaleY(0.7);
+  -webkit-transform: scaleY(0.7);
+  -moz-transform: scaleY(0.7);
+  margin:0;
+  text-align: center;
+}
+.border-line {
+  width:100%;
+  font-family: "Seaweed Script";
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+  margin:0;
+}
+.border-line span {
+  padding: 0.1em 0.3em;
+}
+.border-line:before {
+  content:"";
+  display: block;
+  position: absolute;
+  left:0;
+  right:0;
+  margin-right:auto;
+  margin-left:auto;
+  z-index:-1;
+  top: 50%;
+  width: 30%;
+  border-bottom: 3px solid #fff;
+}
+.border-line:after {
+  content:"";
+  display: block;
+  position: absolute;
+  left:0;
+  right:0;
+  margin-right:auto;
+  margin-left:auto;
+  z-index:-1;
+  top: 60%;
+  width: 20%;
+  border-bottom: 1px solid #fff;
+}
+.text-1 {
+  font-size: 60px;
+  color:red;
+}
+.text-2 {
+  font-size: 169px;
+  color:green;
+}
+
+
+i {
+  font-size:40px;
+	color:#fff;
+	display: inline-block;
+	-webkit-animation: snowflakes 3s linear 1s 20;
+	-moz-animation: snowflakes 3s linear 1s 20;
+	position: relative;
+}
+
+@-webkit-keyframes snowflakes {
+	0% {
+		-webkit-transform: translate3d(0,0,0) rotate(0deg) scale(0.6);
+	}
+	100% {
+		-webkit-transform: translate3d(15px, 1200px, 0px) rotate(360deg) scale(0.6);
+	};
+}
+
+.snowflakes i:nth-child(3n) {
+	width: 16px; height: 3px;
+	-webkit-animation-duration: 10s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-transform-origin: right -45px;
+}
+
+.snowflakes i:nth-child(3n+1) {
+	width: 24px; height: 6px;
+	-webkit-animation-duration: 32s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-transform-origin: right -30px;
+}
+
+.snowflakes i:nth-child(3n+2) {
+	width: 32px; height: 8px;
+	-webkit-animation-duration: 19s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-transform-origin: right -15px;
+}
+/*Delay można dostostować*/
+.snowflakes i:nth-child(7n) {
+  opacity:1;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-timing-function:ease-in;
+}
+.snowflakes i:nth-child(7n+1) {
+  opacity:.5;
+  -webkit-animation-delay: -2s;
+  -webkit-animation-timing-function:ease-out;
+}
+.snowflakes i:nth-child(7n+2) {
+  opacity:1;
+  -webkit-animation-delay: 1.5s;
+  -webkit-animation-timing-function:linear;
+}
+.snowflakes i:nth-child(7n+3) {
+  opacity:.7;
+  -webkit-animation-delay: -3s;
+  -webkit-animation-timing-function:ease-in;
+}
+.snowflakes i:nth-child(7n+4) {
+  opacity:1;
+  -webkit-animation-delay: 2.5s;
+  -webkit-animation-timing-function:linear;
+}
+.snowflakes i:nth-child(7n+5) {
+  opacity:.8;
+  -webkit-animation-delay: -1s;
+  -webkit-animation-timing-function:ease-out;
+}
+.snowflakes i:nth-child(7n+6) {
+  opacity:1;
+  -webkit-animation-delay: 3.5s;
+  -webkit-animation-timing-function:ease-in;
+}
